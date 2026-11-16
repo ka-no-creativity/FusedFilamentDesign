@@ -6,7 +6,15 @@ This is a [FreeCAD PartDesign][fc-partdesign] addon for FFF/FDM 3D-printing desi
 ![A demo screenshot of the Hole Wizard in action](./Resources/splash.png)
 
 ## Installation
-This addon is available through the [FreeCAD Addon-Manager](https://wiki.freecad.org/Std_AddonMgr).
+This fork adds **Counterbore Bridges from Face** to
+[Rahix's FusedFilamentDesign](https://github.com/Rahix/FusedFilamentDesign).
+In FreeCAD's Addon Manager preferences, add
+`https://github.com/ka-no-creativity/FusedFilamentDesign` as a custom repository
+using branch `main`, then install FusedFilamentDesign and restart FreeCAD.
+Use this fork in place of an existing FusedFilamentDesign installation, so only
+one copy of the addon is loaded.
+
+The upstream addon is available through the [FreeCAD Addon-Manager](https://wiki.freecad.org/Std_AddonMgr).
 
 ## Usage
 The addon adds a new toolbar to the [PartDesign][fc-partdesign] workbench where the new tools can be accessed.  Check the tooltips for guidance.
@@ -23,6 +31,7 @@ To find out more about using the tools included in this addon, please check the 
 |---|---|---|:---|
 | ![ffDesign_HoleWizard](./Resources/icons/ffDesign_HoleWizard.svg) | | **Hole Wizard** | Various tools for enhancing [PartDesign Hole][fc-hole] features (see below) |
 | | ![ffDesign_CounterboreBridges](./Resources/icons/ffDesign_CounterboreBridges.svg) | **Counterbore Bridges** | Implementation of the [overhanging counterbore trick][df3dp-counterbore] (**R3.5**) |
+| ![ffDesign_CounterboreBridges](./Resources/icons/ffDesign_CounterboreBridges.svg) | | [**Counterbore Bridges from Face**](./Documentation/ffDesign_CounterboreBridgesFromFace.md) | Native bridge cutouts from a shoulder face on Hole, Pocket, Boolean or STEP geometry |
 | | ![ffDesign_RibThreads](./Resources/icons/ffDesign_RibThreads.svg) | **Thread Forming Ribs** | Hole geometry for [rib thread forming][df3dp-ribthreads] (**R5.4**) |
 | | ![ffDesign_Teardrop](./Resources/icons/ffDesign_Teardrop.svg) | **Teardrop Shape** | Teardrop-shaped holes for [better horizontal holes][df3dp-horizontal-holes] and to avoid [seam inaccuracy][df3dp-seam] (**R2.2** & **R2.3**) |
 | | ![ffDesign_RoofBridge](./Resources/icons/ffDesign_RoofBridge.svg) | **Roof Bridge** | Roof bridges for [horizontal holes][df3dp-horizontal-holes] (**R2.2**) |

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CounterboreBridgesFromFace</class>
+ <widget class="QWidget" name="CounterboreBridgesFromFace">
+  <property name="windowTitle"><string>Counterbore Bridges from Face</string></property>
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="Dimensions">
+     <property name="text"><string>Detected shoulder dimensions</string></property>
+     <property name="wordWrap"><bool>true</bool></property>
+    </widget>
+   </item>
+   <item row="1" column="0"><widget class="QLabel" name="LayerHeightLabel"><property name="text"><string>Print layer height</string></property></widget></item>
+   <item row="1" column="1">
+    <widget class="Gui::QuantitySpinBox" name="LayerHeight" native="true">
+     <property name="unit" stdset="0"><string notr="true">mm</string></property>
+     <property name="minimum" stdset="0"><double>0.000000000000000</double></property>
+    </widget>
+   </item>
+   <item row="2" column="0"><widget class="QLabel" name="BridgeRotationLabel"><property name="text"><string>Bridge rotation</string></property></widget></item>
+   <item row="2" column="1">
+    <widget class="Gui::QuantitySpinBox" name="BridgeRotation" native="true">
+     <property name="unit" stdset="0"><string notr="true">deg</string></property>
+     <property name="minimum" stdset="0"><double>-360.000000000000000</double></property>
+     <property name="maximum" stdset="0"><double>360.000000000000000</double></property>
+    </widget>
+   </item>
+   <item row="3" column="0" colspan="2"><widget class="QCheckBox" name="ShowCutouts"><property name="text"><string>Highlight removed material</string></property><property name="checked"><bool>true</bool></property></widget></item>
+   <item row="4" column="0" colspan="2"><widget class="QPushButton" name="Preview"><property name="text"><string>Update preview</string></property></widget></item>
+   <item row="5" column="0" colspan="2"><widget class="QLabel" name="Status"><property name="text"><string>Set the layer height and preview the bridge cutouts.</string></property><property name="wordWrap"><bool>true</bool></property></widget></item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

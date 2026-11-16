@@ -3,6 +3,7 @@ import FreeCADGui
 
 import ffDesign_HoleWizard
 import ffDesign_CounterboreBridges
+import ffDesign_CounterboreBridgesFromFaceGui
 import ffDesign_RibThreads
 import ffDesign_Teardrop
 import ffDesign_RoofBridge
@@ -19,7 +20,10 @@ def register_pd_toolbar():
     # all_bars = pd_toolbars.GetGroups()
     # Utils.Log.info(f"All PartDesign Toolbars: {all_bars!r}")
 
-    PD_TOOLBAR_COMMANDS = ["ffDesign_About", "ffDesign_HoleWizard", "ffDesign_ZipTieChannels", "ffDesign_AutoFillet"]
+    PD_TOOLBAR_COMMANDS = [
+        "ffDesign_About", "ffDesign_HoleWizard", "ffDesign_CounterboreBridgesFromFace",
+        "ffDesign_ZipTieChannels", "ffDesign_AutoFillet",
+    ]
 
     for tb_name in pd_toolbars.GetGroups():
         tb = pd_toolbars.GetGroup(tb_name)

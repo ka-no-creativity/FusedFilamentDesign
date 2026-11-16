@@ -14,6 +14,7 @@ import ffDesign_Utils as Utils
 import ffDesign_CounterboreBridges
 import ffDesign_RibThreads
 import ffDesign_RoofBridge
+from ffDesign_CounterboreBridgesFromFaceTests import NativeCounterboreBridges, CounterboreBridgesTaskPanelTests
 
 TEST_DOCUMENTS_PATH = "ffDesign_TestData"
 

@@ -65,4 +65,5 @@ jobs:
         run: |
           set -o pipefail
           xvfb-run -a ./FreeCAD.AppImage -t ffDesign_Tests 2>&1 | tee freecad-tests.log
-          ! grep -q "Traceback (most recent call last)" freecad-tests.log
+          ! grep -Eq 'Traceback \(most recent call last\)|FAILED \(' freecad-tests.log
+          grep -Eq '^Ran [0-9]+ tests?' freecad-tests.log

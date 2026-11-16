@@ -2,6 +2,9 @@
 ## Command: Counterbore Bridges
 This command is primarily accessed through the [Hole Wizard](./ffDesign_HoleWizard.md).
 
+For a shoulder created with Pockets, Boolean cuts, or imported geometry, use
+[Counterbore Bridges from Face](./ffDesign_CounterboreBridgesFromFace.md).
+
 This command changes the bottom of a hole's counterbore to be constructed of
 layered bridges.  This allows printing the counterbore upside down without
 support material.  Check this image for a rough visualization:

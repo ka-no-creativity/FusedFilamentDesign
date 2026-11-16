@@ -7,8 +7,8 @@
   <date>2026-09-01</date>
   <maintainer email="freecad@rahix.de">rahix</maintainer>
   <license file="LICENSE">LGPL-2.1-or-later</license>
-  <url type="repository" branch="release">https://github.com/Rahix/FusedFilamentDesign</url>
-  <url type="readme">https://github.com/Rahix/FusedFilamentDesign/blob/release/README.md</url>
+  <url type="repository" branch="main">https://github.com/ka-no-creativity/FusedFilamentDesign</url>
+  <url type="readme">https://github.com/ka-no-creativity/FusedFilamentDesign/blob/main/README.md</url>
   <icon>Resources/icons/ffDesign_Logo.svg</icon>
 
   <content>

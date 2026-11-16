@@ -5,6 +5,7 @@ This is the documentation for the tools included in the _FusedFilamentDesign_ ad
 |---|---|---|:---|
 | ![ffDesign_HoleWizard](../Resources/icons/ffDesign_HoleWizard.svg) | | [**Hole Wizard**](./ffDesign_HoleWizard.md) | Various tools for enhancing PartDesign Hole features (see below) |
 | | ![ffDesign_CounterboreBridges](../Resources/icons/ffDesign_CounterboreBridges.svg) | [**Counterbore Bridges**](./ffDesign_CounterboreBridges.md) | Implementation of the overhanging counterbore trick |
+| ![ffDesign_CounterboreBridges](../Resources/icons/ffDesign_CounterboreBridges.svg) | | [**Counterbore Bridges from Face**](./ffDesign_CounterboreBridgesFromFace.md) | Native bridge cutouts from circular shoulder geometry |
 | | ![ffDesign_RibThreads](../Resources/icons/ffDesign_RibThreads.svg) | [**Thread Forming Ribs**](./ffDesign_RibThreads.md) | Hole geometry for rib thread forming |
 | | ![ffDesign_Teardrop](../Resources/icons/ffDesign_Teardrop.svg) | [**Teardrop Shape**](./ffDesign_Teardrop.md) | Teardrop-shaped holes for better horizontal holes and to avoid seam inaccuracy |
 | | ![ffDesign_RoofBridge](../Resources/icons/ffDesign_RoofBridge.svg) | [**Roof Bridge**](./ffDesign_RoofBridge.md) | Roof bridges for horizontal holes |

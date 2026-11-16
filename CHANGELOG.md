@@ -11,6 +11,11 @@ and this project adheres to
 
 ## [Unreleased]
 
+### Added
+- Counterbore Bridges from Face: detect circular shoulders directly from Hole,
+  Pocket, Boolean and imported STEP solids. Preview native sketch/Pocket cutouts
+  with editable layer height and rotation, and validate source geometry changes.
+
 
 ## [0.26.360] - 2026-09-01
 ### Added
