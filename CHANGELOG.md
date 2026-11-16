@@ -16,6 +16,10 @@ and this project adheres to
   Pocket, Boolean and imported STEP solids. Preview native sketch/Pocket cutouts
   with editable layer height and rotation, and validate source geometry changes.
 
+### Changed
+- This fork targets FreeCAD 1.1 and newer. Package metadata declares the minimum
+  version and maintained CI coverage focuses on FreeCAD 1.1.x.
+
 
 ## [0.26.360] - 2026-09-01
 ### Added

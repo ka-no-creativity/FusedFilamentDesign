@@ -8,6 +8,9 @@ This is a [FreeCAD PartDesign][fc-partdesign] addon for FFF/FDM 3D-printing desi
 ## Installation
 This fork adds **Counterbore Bridges from Face** to
 [Rahix's FusedFilamentDesign](https://github.com/Rahix/FusedFilamentDesign).
+**This fork supports FreeCAD 1.1 and newer.** Its maintained test target is
+FreeCAD 1.1.x; FreeCAD 1.0 compatibility is outside this fork's support scope.
+
 In FreeCAD's Addon Manager preferences, add
 `https://github.com/ka-no-creativity/FusedFilamentDesign` as a custom repository
 using branch `main`, then install FusedFilamentDesign and restart FreeCAD.

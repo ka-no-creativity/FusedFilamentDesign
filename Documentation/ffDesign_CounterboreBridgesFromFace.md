@@ -1,5 +1,7 @@
 # Counterbore Bridges from Face
 
+This fork targets **FreeCAD 1.1 and newer**, with maintained tests on 1.1.x.
+
 Create two-layer bridge cutouts by selecting the flat ring where a screw head
 rests inside an existing counterbore. The source can be a PartDesign Hole,
 Pockets, Boolean cuts, or an imported STEP solid. No source sketch is required.

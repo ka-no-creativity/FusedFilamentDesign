@@ -5,6 +5,7 @@
   <!-- We use innovative calender-derived zero-versioning. See CHANGELOG.md for more info. -->
   <version>0.26.360</version>
   <date>2026-09-01</date>
+  <freecadmin>1.1.0</freecadmin>
   <maintainer email="freecad@rahix.de">rahix</maintainer>
   <license file="LICENSE">LGPL-2.1-or-later</license>
   <url type="repository" branch="main">https://github.com/ka-no-creativity/FusedFilamentDesign</url>
@@ -12,10 +13,8 @@
   <icon>Resources/icons/ffDesign_Logo.svg</icon>
 
   <content>
-    <!-- Technically FusedFilamentDesign does not include a workbench and is instead just an addon to PartDesign.
-
-    It seems FreeCAD 1.1 will support a `other` type of addon which would suit us.  But to make this
-    work on FreeCAD 1.0, we have to pretend being a workbench for the time being... -->
+    <!-- This addon extends PartDesign. Keep its established workbench metadata
+         so the Addon Manager discovers the toolbar and initialization scripts. -->
     <workbench>
       <classname>ffDesignWB</classname>
       <subdirectory>./</subdirectory>

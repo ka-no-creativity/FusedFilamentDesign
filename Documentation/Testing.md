@@ -17,7 +17,9 @@ FreeCAD -t ffDesign_CounterboreBridgesFromFaceTests
 
 These test Hole/Pocket/Boolean/STEP sources, transformed geometry, multiple
 counterbores, native recomputation, invalid geometry, undo/redo and the task panel.
-They are also included in `ffDesign_Tests` and its FreeCAD 1.0.2/1.1.1 CI matrix.
+They are also included in `ffDesign_Tests`. This fork targets FreeCAD 1.1 and newer;
+CI runs the complete suite on 1.1.1, and the procedural suite is also verified
+locally on 1.1.4. FreeCAD 1.0 is outside the maintained test scope.
 When run from Python, the headless `NativeCounterboreBridges` test class also
 starts a fresh interpreter to check native recomputation without the addon on its path.
 
