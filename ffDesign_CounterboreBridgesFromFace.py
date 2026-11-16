@@ -144,14 +144,14 @@ def detect_counterbore(source, face_name, *, require_tip=True):
 
 def length_mm(value):
     quantity = App.Units.Quantity(value)
-    if quantity.Unit.Type not in ("1", "Length") or not math.isfinite(quantity.Value):
+    if quantity.Unit not in (App.Units.Unit(), App.Units.Length) or not math.isfinite(quantity.Value):
         raise BridgeError("Layer height must be a finite length.")
     return quantity.Value
 
 
 def angle_degrees(value):
     quantity = App.Units.Quantity(value)
-    if quantity.Unit.Type not in ("1", "Angle") or not math.isfinite(quantity.Value):
+    if quantity.Unit not in (App.Units.Unit(), App.Units.Angle) or not math.isfinite(quantity.Value):
         raise BridgeError("Bridge rotation must be a finite angle.")
     return quantity.Value
 

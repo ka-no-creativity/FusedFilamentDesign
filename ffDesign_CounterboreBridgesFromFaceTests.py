@@ -46,6 +46,7 @@ def partdesign_source(doc, *, hole=False):
     profile = body.newObject("Sketcher::SketchObject", "BoreProfile")
     profile.Placement.Base = App.Vector(0, 0, 10)
     profile.addGeometry(Part.Circle(App.Vector(10, 10, 0), App.Vector(0, 0, 1), 2), False)
+    doc.recompute()
     if hole:
         source = body.newObject("PartDesign::Hole", "Hole")
         source.Profile = (profile, [""])
@@ -346,7 +347,7 @@ class NativeCounterboreBridges(unittest.TestCase):
             settings.BridgeRotation = 17
             self.doc.recompute()
             self.assertEqual(settings.ValidationStatus, "Valid")
-            if not App.GuiUp:
+            if not App.GuiUp and Path(sys.executable).name.lower().startswith("python"):
                 # Fresh interpreter with no addon on sys.path: no observer or
                 # custom feature class can participate in this recomputation.
                 script = """
@@ -355,11 +356,13 @@ sys.path.insert(0, sys.argv[1])
 import FreeCAD as A
 import Part, Sketcher
 d=A.openDocument(sys.argv[2])
-p=d.getObject(sys.argv[3]); p.LayerHeight=0.27; p.BridgeRotation=17
+p=d.getObject(sys.argv[3]); before=d.getObject(p.ResultName).Shape.Volume
+p.LayerHeight=0.27; p.BridgeRotation=17
 d.recompute()
 r=d.getObject(p.ResultName)
 assert r.Shape.isValid() and 'Invalid' not in r.State
 assert abs(r.Length.Value-0.54)<1e-8
+assert r.Shape.Volume < before-1e-6
 assert all(not o.TypeId.endswith('Python') for o in d.Objects)
 assert 'ffDesign_CounterboreBridgesFromFace' not in sys.modules
 A.closeDocument(d.Name)
