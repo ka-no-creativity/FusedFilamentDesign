@@ -298,8 +298,11 @@ def _create_native(info, height, rotation):
     body.Tip = cut_base
     for suffix, multiplier in (("Y", 1), ("X", 2)):
         sketch = body.newObject("Sketcher::SketchObject", f"FaceBridges{suffix}Profile")
-        sketch.AttachmentSupport = [(dimensions, [""])]
-        sketch.MapMode = "ObjectXY"
+        # FreeCAD 1.0 cannot attach ObjectXY to a measurement-only sketch: its
+        # external circles do not contribute to Shape. Use the same planar
+        # support as the measurement sketch, so both native frames coincide.
+        sketch.AttachmentSupport = [(shoulder, ["Face1"])]
+        sketch.MapMode = "FlatFace"
         for component in ("x", "y"):
             sketch.setExpression(f"AttachmentOffset.Base.{component}",
                                  f"{dimensions.Name}.ExternalGeo[2].Center.{component} * 1mm")
